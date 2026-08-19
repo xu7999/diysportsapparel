@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="DIY SPORTS 产品电子画册">
+  <title>DIY SPORTS Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="reader-shell">
+    <header class="reader-header">
+      <div class="logo-crop" aria-label="DIY SPORTS GEAR"><img src="assets/diy-logo.png" alt="DIY SPORTS GEAR"></div>
+      <div class="document-title">
+        <h1>DIY SPORTS <span>PRODUCT CATALOG</span></h1>
+        <p><span id="page-label">封面</span> <i></i> 共 17 页</p>
+      </div>
+      <button id="header-thumbs" class="header-action" aria-label="打开页面缩略图">▦</button>
+    </header>
+
+    <section class="reader-stage" aria-label="DIY SPORTS 电子产品画册">
+      <button id="stage-prev" class="turn-button turn-left" aria-label="上一页" disabled>‹</button>
+      <div id="book-frame" class="book-engine-frame is-cover">
+        <div id="book" class="book-engine"></div>
+        <div id="drag-handle" class="book-drag-handle" aria-hidden="true"></div>
+        <div id="loading" class="book-loading"><span></span>正在装订画册</div>
+      </div>
+      <button id="stage-next" class="turn-button turn-right" aria-label="下一页">›</button>
+      <div class="drag-hint" aria-hidden="true">Hold Ctrl + drag to move · Scroll to zoom</div>
+      <div class="swipe-hint" aria-hidden="true">拖动页角或左右滑动翻页</div>
+    </section>
+
+    <aside id="drawer" class="thumbnail-drawer" aria-hidden="true">
+      <div class="drawer-heading"><strong>页面预览</strong><span>17 页</span><button id="close-drawer" aria-label="关闭页面预览">×</button></div>
+      <div id="thumbnail-list" class="thumbnail-list"></div>
+    </aside>
+
+    <nav class="reader-toolbar" aria-label="阅读工具">
+      <button id="toolbar-thumbs" aria-label="页面缩略图" title="页面缩略图">▦</button>
+      <span class="toolbar-divider"></span>
+      <button id="toolbar-prev" aria-label="上一页" title="上一页" disabled>‹</button>
+      <button id="page-readout" class="page-readout" aria-label="选择页面">1 / 17</button>
+      <button id="toolbar-next" aria-label="下一页" title="下一页">›</button>
+      <span class="toolbar-divider"></span>
+      <button id="share" aria-label="分享画册" title="分享">↗</button>
+      <a href="assets/downloads/DIY-SPORTS-Catalog.pdf" download aria-label="下载 PDF" title="下载 PDF">⇩</a>
+      <button id="zoom-out" aria-label="缩小" title="缩小">−</button>
+      <span id="zoom-readout" class="zoom-readout">100%</span>
+      <button id="zoom-in" aria-label="放大" title="放大">＋</button>
+      <button id="fullscreen" aria-label="全屏阅读" title="全屏">⛶</button>
+    </nav>
+    <div id="notice" class="notice" role="status" hidden></div>
+  </main>
+  <script src="vendor/page-flip.browser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
